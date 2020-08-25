@@ -1,3 +1,6 @@
 index:
   path: /
-  controller: App\Controller\ProductController::index
+  controller: App\Controller\IndexController::index
+api:
+  path: /api/products/recommended/{city}
+  controller: App\Controller\RecommendedProductsController::getRecommendedProduct
