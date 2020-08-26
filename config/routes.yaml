@@ -4,3 +4,6 @@ index:
 api:
   path: /api/products/recommended/{city}
   controller: App\Controller\RecommendedProductsController::getRecommendedProduct
+cityList:
+  path: api/city/list
+  controller: App\Controller\CityListController::index
