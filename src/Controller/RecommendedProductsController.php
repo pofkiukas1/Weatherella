@@ -35,7 +35,11 @@ class RecommendedProductsController extends AbstractController
     public function getWeatherForCity($city)
     {
         $url = "https://api.meteo.lt/v1/places/$city/forecasts/long-term";
-        $allWeather = json_decode(file_get_contents($url),true );
+        $content = @file_get_contents($url);
+        if (false === $content) {
+            throw $this->createNotFoundException('No such city found, try using https://weatherella.herokuapp.com//api/products/recommended/{city}');
+        }
+        $allWeather = json_decode($content,true);
         return $this->getCurrentWeather($allWeather);
     }
 
