@@ -11,6 +11,7 @@ Requirements
 * PHP 7.2.9 or higher;
 * [the usual Symfony application requirements][1].
 
+
 Installation
 ------------
 
@@ -48,7 +49,13 @@ https://localhost:8000/api/products/recommended/{city}
 An example: 
 <https://localhost:8000/api/products/recommended/vilnius>
 
-Note: The database is hosted online
+To preview a list of available cities use: 
+
+
+<https://weatherella.herokuapp.com/api/city/list>
+
+
+Note: The database is hosted online (PostgreSQL Version 12.3)
 
 Used Libraries and Data
 -----------------------
