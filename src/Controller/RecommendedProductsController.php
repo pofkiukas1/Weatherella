@@ -21,6 +21,7 @@ class RecommendedProductsController extends AbstractController
   
     public function getRecommendedProduct($city, ProductRepository $productRepository)
     {
+        //TODO add other language support
         $forecast = $this->getWeatherForCity($city);
         $products=$productRepository->findByAppropirateWeather($forecast['conditionCode'], $forecast['temperature']); 
         $productResult = new ProductResult();
